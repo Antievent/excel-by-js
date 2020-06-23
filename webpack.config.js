@@ -1,4 +1,4 @@
-// next lesson 27
+// next lesson 39
 const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
@@ -12,7 +12,8 @@ const jsLoaders = () => {
     const loaders = [{
         loader: 'babel-loader',
         options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-proposal-class-properties']
         }
     }];
     if (isDev) {
