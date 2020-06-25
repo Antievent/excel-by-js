@@ -20,6 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     min-width: $info-cell-width;
     height: 100%;
     border: 1px solid $border-color;
@@ -35,6 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     background: #f8f9fa;
     min-width: 40px;
     width: $cell-width;
@@ -59,8 +61,37 @@
 
     &.selected {
       border: none;
-      outline: 2px solid #3c74ff;
+      outline: 2px solid $primary-color;
       z-index: 2;
+    }
+  }
+  .col-resize,
+  .row-resize {
+    background: $primary-color;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+  .col-resize {
+    width: 4px;
+    position: absolute;
+    top: 0;
+
+    &:hover {
+      opacity: 1;
+      cursor: col-resize;
+    }
+  }
+
+  .row-resize {
+    height: 4px;
+    left: 0;
+
+    &:hover {
+      opacity: 1;
+      cursor: row-resize;
     }
   }
 

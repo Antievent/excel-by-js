@@ -1,4 +1,4 @@
-// next lesson 39
+// next lesson 49
 const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
