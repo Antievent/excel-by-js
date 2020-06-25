@@ -12,6 +12,7 @@
     "linebreak-style": "off",
     "indent": "off",
     "semi": "off",
+    "no-unused-vars": "off",
     "operator-linebreak": "off"
   },
   "extends": ["eslint:recommended", "google"]
