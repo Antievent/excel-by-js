@@ -1,4 +1,4 @@
-// next lesson 49
+// next lesson 59
 const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
@@ -25,7 +25,7 @@ const jsLoaders = () => {
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
-    entry: ['babel-polyfill','./index.js'],
+    entry: ['babel-polyfill', './index.js'],
     output: {
         filename: filename('js'),
         path: path.resolve(__dirname, 'dist')
