@@ -19,10 +19,12 @@ class Dom {
 
     addClass(className) {
         this.$el.classList.add(className)
+        return this
     }
 
     removeClass(className) {
         this.$el.classList.remove(className)
+        return this
     }
 
     html(html) {
@@ -31,6 +33,17 @@ class Dom {
             return this;
         }
         return this.$el.outerHTML.trim()
+    }
+
+    text(text) {
+        if (typeof text === 'string') {
+            this.$el.textContent = text
+            return this
+        }
+        if (this.$el.tagName.toLocaleLowerCase() === 'input') {
+            return this.$el.value.trim()
+        }
+        return this.$el.textContent.trim()
     }
 
     clear() {
@@ -79,6 +92,7 @@ class Dom {
     css(styles = {}) {
         Object.keys(styles).forEach(key => this.$el.style[key] = styles[key])
     }
+
     focus() {
         this.$el.focus()
         return this
